@@ -3184,7 +3184,7 @@ fieldset:disabled a.btn {
     border-color: #dc3545;
 }
 
-.btn-danger: {
+.btn-danger {
     color: #fff;
     background-color: #c82333;
     border-color: #bd2130;
@@ -7509,7 +7509,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #ffffff !important;
+    background-color: #d40571 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -11744,7 +11744,7 @@ h1, h2, h3, h4, h5,
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light {
-        background: #fff !important;
+        background: #d40571 !important;
         /*position: relative;*/
         top: 0;
     }
@@ -11776,7 +11776,7 @@ h1, h2, h3, h4, h5,
     padding-bottom: .9rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #000;
+    color: #fff;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -11875,7 +11875,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: #ec0000 !important;
+    color: #fff !important;
     cursor: pointer;
     padding-right: 0;
     text-transform: uppercase;
@@ -11895,7 +11895,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
-    background: #fff !important;
+    background: #d40571 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -11947,7 +11947,7 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light.scrolled .navbar-toggler {
     border: none;
-    color: #ec0000 !important;
+    color: #FFF !important;
     cursor: pointer;
     padding-right: 16px;
     text-transform: uppercase;
@@ -11958,7 +11958,7 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light.scrolled .nav-link {
     padding-top: 0.9rem !important;
     padding-bottom: 0.9rem !important;
-    color: #000000 !important;
+    color: #fff !important;
 }
 
 .ftco-navbar-light.scrolled .nav-link.active {
@@ -14267,7 +14267,7 @@ textarea.form-control {
 .btn-opc {
     width: 50px;
     height: 50px;
-    background: rgb(0, 0, 0);
+    background: rgb(212 5 113);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14318,10 +14318,8 @@ textarea.form-control {
     width: 50px;
 }
 
-
 .fondo {
-
-    background: url(../images/web2.png) no-repeat center top;
+    background: url(../images/izziback.jpg) no-repeat center top;
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -14339,7 +14337,7 @@ textarea.form-control {
 
 @media (max-width: 600px) {
     .fondo {
-        background: url(../images/mobile2.png) no-repeat center top;
+        background: url(../images/izziback.jpg) no-repeat center top;
         height: 100vh;
         width: 100%;
         background-size: cover;

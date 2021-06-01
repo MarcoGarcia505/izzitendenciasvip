@@ -150,13 +150,13 @@ iframe {
 .txt2 {
     font-family: Poppins-Regular;
     font-size: 13px;
-    color: #333333;
+    color: #fff;
     line-height: 1.5;
 }
 
-.txt2:hover {
+/* .txt2:hover {
     color: #333333;
-}
+} */
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
@@ -398,7 +398,7 @@ iframe {
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
-    background: #ec0000;
+    background: #492c88;
 
     display: -webkit-box;
     display: -webkit-flex;

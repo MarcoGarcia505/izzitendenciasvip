@@ -9,19 +9,18 @@
         <section class="hero-wrap degree-right js-fullheight" id="new">
             <div class="fondo">
                 <div class="slider-item js-fullheight">
-
                     <div class="row no-gutters slider-text js-fullheight align-items-center">
                         <div class="col-md-12 ftco-animate">
                             <div class="text aliniacion">
                                 <h1 class="mb-4 edittext">Click para ver el evento</h1>
-                                <!--<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>-->
-                                <p class="mb-0"><a href="{{ $configuration->video_url }}" class="playbutton img-video popup-vimeo d-flex align-items-center justify-content-center" data-autoplay="true" data-vbtype="video">
+                                {{-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> --}}
+                                {{-- <p class="mb-0"><a href="{{ $configuration->video_url }}" class="playbutton img-video popup-vimeo d-flex align-items-center justify-content-center" data-autoplay="true" data-vbtype="video">
                                         <span class="fa fa-play" style="color: black;"></span>
                                     </a></p>
+                                    <p class="mb-0"></p> --}}
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -29,7 +28,10 @@
 
     <section class="ftco-section animated fadeInDown" id="new1">
         <div class="container">
-            <div class="row justify-content-center no-gutters">
+            <div class="videocondference" style="width: 100%; height: 600px;">
+                <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://8x8.vc/cwamx/jrivera" style="height: 100%; width: 100%; border: 0px;"></iframe>
+            </div>
+            {{-- <div class="row justify-content-center no-gutters">
                 <div class="col-md-12 heading-section text-center ftco-animate mb-5">
                     <h2 class="mb-2">Bienvenida</h2>
                 </div>
@@ -47,22 +49,22 @@
             </div>
             <div class="row wrap-about m-0 d-flex d-md-none" style="margin-bottom: -50px!important;">
                 <div class="col-12 text-center">
-                    <img style="" class="img" src="<?= url('public/images/presentadores/OPC1.png') ?>" alt="">
+                    <img style="" class="img" src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
                 </div>
             </div>
             <div class="row wrap-about m-0 my-5">
                 <div class="col-12">
-                    <img style="max-height: 300px; padding-right: 40px;" class="d-none d-md-block img pull-left" src="<?= url('public/images/presentadores/OPC1.png') ?>" alt="">
+                    <img style="max-height: 300px; padding-right: 40px;" class="d-none d-md-block img pull-left" src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
                     <p style="color: black;font-size: 1.3rem;padding: 15px;">“A todo el equipo de la BEI y a nuestros invitados les doy la más cordial bienvenida a nuestro Kick Off Digital BEI 2021. A lo largo de la sesión platicaremos sobre los retos y prioridades que juntos enfrentaremos este año
                         y aprovecharemos la oportunidad para reconocer a
                         los colaboradores que durante el año 2020 marcaron la diferencia...”</p>
                     <h5 class="mt-2">¡Bienvenidos!</h5>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
-    <section class="ftco-section testimony-section" id="speakers">
+    {{-- <section class="ftco-section testimony-section" id="speakers">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-8 text-center heading-section ftco-animate">
@@ -72,7 +74,7 @@
             <div class="row  ftco-animate">
                 <div class="col-lg-4 col-md-6">
                     <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('public/images/presentadores/OPC1.png') ?>" alt="Speaker 1" class="img-fluid">
+                        <img src="<?= url('images/presentadores/OPC1.png') ?>" alt="Speaker 1" class="img-fluid">
                         <div class="details">
                             <h3><a href="#opc1">Fernando Quesada Gómez</a></h3>
                             <p>Director General Adjunto de Banca de Empresas</p>
@@ -84,7 +86,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('public/images/presentadores/OPC2.png') ?>" alt="Speaker 2" class="img-fluid">
+                        <img src="<?= url('images/presentadores/OPC2.png') ?>" alt="Speaker 2" class="img-fluid">
                         <div class="details">
                             <h3><a href="#opc2">Javier Rodríguez Ardila</a></h3>
                             <p>Director Ejecutivo Segmento Empresas y Estrategia BEI</p>
@@ -96,7 +98,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC3.png') ?>" alt="Speaker 3" class="img-fluid">
+                        <img src="<?= url('images/presentadores/OPC3.png') ?>" alt="Speaker 3" class="img-fluid">
                         <div class="details">
                             <h3><a href="#opc3">Luis Alberto Castellanos</a></h3>
                             <p>Director Ejecutivo Regional Centro</p>
@@ -108,7 +110,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('public/images/presentadores/OPC4.png') ?>" alt="Speaker 1" class="img-fluid">
+                        <img src="<?= url('images/presentadores/OPC4.png') ?>" alt="Speaker 1" class="img-fluid">
                         <div class="details">
                             <h3><a href="#opc4">Enrique Victorica</a></h3>
                             <p>Director Ejecutivo Regional Metro Norte</p>
@@ -288,9 +290,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section class="ftco-section bg-light" id="new3">
+    {{-- <section class="ftco-section bg-light" id="new3">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 heading-section text-center ftco-animate">
@@ -522,14 +524,14 @@
             </div>
         </div>
         <div class="degree-left-footer"></div>
-    </section>
+    </section> --}}
 
     @if (auth()->user()->acl_level < 100)
         <div class="btn-opc">
-            <img class="img-opc" src="{{ url('public/images/icons/conversacion.svg') }}" alt="">
+            {{-- <img class="img-opc" src="{{ url('images/icons/conversacion.svg') }}" alt=""> --}}
         </div>
         <div class="btn-opc2 d-none">
-            <img class="img-opc" src="{{ url('public/images/icons/respuesta.svg') }}" alt="">
+            <img class="img-opc" src="{{ url('images/icons/respuesta.svg') }}" alt="">
         </div>
     @endif
 
@@ -654,18 +656,13 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC1.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Fernando Quesada Gómez</h2>
                 <h4 class="cargouserr">Director General Adjunto de Banca de Empresas e Instituciones</h4>
             </div>
             <div class="descripcionuser">
-                <p style="text-align: justify;">Es Licenciado en Administración de Empresas por la Universidad Del Valle de Atemajac de Guadalajara.
-                    Actualmente ocupa el puesto de Director General Adjunto de Banca de Empresas e Instituciones en Banco Santander México, mismo que desempeña desde el 2013.
-                    Anteriormente ocupó el cargo de Director General Adjunto de Banca Privada y se ha desempañado en diferentes puestos dentro de Grupo Santander México como Director de Segmento de Banca de Empresas e Instituciones, Director Ejecutivo Regional de Metro Sur, así como de la Región de
-                    Occidente.
-                    También ha ocupado posiciones importantes tanto en Banco Mercantil Probursa, como en Banca Cremi.
-                </p>
+               
             </div>
         </div>
     </div>
@@ -675,7 +672,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC2.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC2.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Javier Rodríguez Ardila</h2>
                 <h4 class="cargouserr">Director Ejecutivo Segmento Empresas y Estrategia BEI</h4>
@@ -696,7 +693,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC3.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC3.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Luis Alberto Castellanos</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Centro</h4>
@@ -716,7 +713,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC4.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC4.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Enrique Victorica</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Metro Norte</h4>
@@ -736,7 +733,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC5.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC5.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Ricardo Valle</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Metro Sur</h4>
@@ -756,7 +753,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC6.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC6.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Luis Mendiola</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Noreste</h4>
@@ -777,7 +774,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC7.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC7.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Alejandro Vázquez</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Noroeste</h4>
@@ -797,7 +794,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC8.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC8.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Humberto Pereira</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Norte</h4>
@@ -817,7 +814,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC9.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC9.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Alejandro Romano</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Occidente</h4>
@@ -837,7 +834,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC10.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC10.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Verónica Castellanos</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Sur</h4>
@@ -857,7 +854,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC11.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC11.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Jesús Valderrama</h2>
                 <h4 class="cargouserr">Director Ejecutivo Regional Sureste</h4>
@@ -878,7 +875,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC12.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC12.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Antonio Basagoiti Pastor</h2>
                 <h4 class="cargouserr">Director Ejecutivo de Grandes Empresas</h4>
@@ -899,7 +896,7 @@
             <a href="#close" title="Close" class="close">X</a>
             <div class="headerpro">
                 <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC13.png') ?>" alt="">
+                    <img src="<?= url('images/presentadores/OPC13.png') ?>" alt="">
                 </a>
                 <h2 class="nameuserr">Pilar Herrera Ludeña</h2>
                 <h4 class="cargouserr">Director Ejecutivo de Negocio Instituciones y Sector Público</h4>
