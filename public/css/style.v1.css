@@ -47,6 +47,7 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    scroll-behavior: smooth !important;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -244,6 +245,8 @@ textarea {
     font-size: inherit;
     line-height: inherit;
 }
+
+
 
 button,
 input {
@@ -11784,7 +11787,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: #ec0000;
+    color: #FFD92A;
 }
 
 @media (max-width: 991.98px) {
@@ -11863,9 +11866,9 @@ h1, h2, h3, h4, h5,
     background: #fff5ed !important;
 }
 
-.ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #ec0000;
-}
+/* .ftco-navbar-light .navbar-nav > .nav-item.active > a {
+    color: #FFD92A;
+} */
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav > .nav-item.active > a {
@@ -11908,9 +11911,9 @@ h1, h2, h3, h4, h5,
     }
 }
 
-.ftco-navbar-light.scrolled .nav-item.active > a {
+/* .ftco-navbar-light.scrolled .nav-item.active > a {
     color: #d1002c !important;
-}
+} */
 
 .ftco-navbar-light.scrolled .nav-item.cta > a {
     color: #fff !important;
@@ -12667,14 +12670,14 @@ h1, h2, h3, h4, h5,
     position: relative;
     z-index: 0;
 }
-
+/* 
 .degree-right:after, .degree-right:before {
     position: absolute;
     content: '';
     height: 50px;
     z-index: 2;
     bottom: -25px;
-}
+} */
 
 .degree-right:before {
     width: 65%;
@@ -14315,14 +14318,32 @@ textarea.form-control {
 }
 
 .img-opc {
-    width: 50px;
+    width: 15px;
 }
 
 .fondo {
-    background: url(../images/izziback.jpg) no-repeat center top;
+    background: url(../images/SESIONES_AGENDA.jpg) no-repeat center top;
     height: 100vh;
     width: 100%;
     background-size: cover;
+}
+.fondopatrocinador{
+    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.fondoagenda{
+    /* background: url(../images/agentback.jpg) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    background-size: cover; */
+    /* background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat;
+    background-position: bottom;
+    height: 100%;
+    width: 100%; */
+    
 }
 
 .fondo::before {
@@ -14355,9 +14376,9 @@ textarea.form-control {
 }
 
 .playbutton {
-    display: block;
-    width: 68px;
-    height: 68px;
+    /* display: block;
+    width: 100%;
+    height: 40px;
     border-radius: 50%;
     background: #ffffff;
     -webkit-animation: pulse 2s infinite;
@@ -14366,8 +14387,30 @@ textarea.form-control {
     right: 35%;
     margin-right: auto;
     margin-left: auto;
-    color: #000;
+    color: #000; */
+    width: 100%;
+	height: 40px;
+	/* background-color: #492c88; */
+	border-radius: 25px;
+	transition: all 0.4s;
+	border: none;
+	background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    z-index: 99999;
 }
+.playbutton > span{
+    color: #fff;
+    font-weight: bold;
+}
+
+.item-empresas:hover .playbutton{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
 
 .aliniacion {
     /*width: 398px;
@@ -14729,15 +14772,15 @@ textarea.form-control {
 }
 
 .modalDialog > div {
-    width: 763px;
-    height: auto;
+    width: 60%;
+    height: 67%;
     display: flex;
     box-shadow: 1px 1px 4px 2px rgb(197 119 119 / 20%);
     position: relative;
-    margin: 10% auto;
-    padding: 0px 0px 0px 20px;
+    margin: 6% auto;
+    
     /* border-radius: 10px; */
-    background: #e6e6e6;
+    /* background: #e6e6e6; */
     background: -moz-linear-gradient(#fff, #999);
     /* background: -webkit-linear-gradient(#fff, #999); */
     background: -o-linear-gradient(#fff, #999);
@@ -14835,7 +14878,7 @@ textarea.form-control {
 
 .chat-popup,
 .response-popup {
-    position: fixed;
+    /* position: fixed;
     bottom: 120px;
     right: 15px;
     border: 3px solid #3b3c3e;
@@ -14847,7 +14890,35 @@ textarea.form-control {
     min-width: 40px;
     display: none;
     border-radius: 6px;
+    margin: 20px; */
+
+
+    position: fixed;
+    bottom: 120px;
+    right: 15px;
+    /* border: 3px solid #3b3c3e; */
+    z-index: 9999991;
+    /* background-color: #3b3c3e; */
+    width: 400px;
+    max-width: 90%;
+    padding: 10px;
+    min-width: 40px;
+    display: none;
+    /* border-radius: 6px; */
     margin: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    /* padding: 3em; */
+    /* height: 320px; */
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgb(0 0 0 / 20%);
+    /* text-align: center; */
+    /* position: relative; */
+    /* -webkit-transition: all 0.2s ease-in-out; */
+    transition: all 0.2s ease-in-out;
 }
 
 .chat-popup {
@@ -14867,9 +14938,12 @@ textarea.form-control {
     width: 100%;
     padding: 10px;
     border: none;
-    background: #ffffff;
+    /* background: #ffffff; */
     resize: none;
-    color: #000000;
+    color: #fff;
+    border-bottom: 1px solid #ffffff59;
+    background: rgb(255 255 255 / 0%);
+    /* box-shadow: 4px 4px 60px 8px rgb(0 0 0 / 20%);*/
 }
 
 .chat-popup .form-container label {
@@ -14886,7 +14960,7 @@ textarea.form-control {
 }
 
 .chat-popup .form-container .btn {
-    background-color: #f34423;
+    /* background-color: #f34423;
     color: white;
     padding: 16px 20px;
     border: none;
@@ -14894,7 +14968,18 @@ textarea.form-control {
     width: 100%;
     margin-bottom: 10px;
     float: left;
-    opacity: 0.8;
+    opacity: 0.8; */
+        /* background-color: #f34423; */
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        float: left;
+        opacity: 0.8;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgb(0 0 0 / 20%)
 }
 
 .chat-popup .form-container .btn + .btn {
@@ -14927,11 +15012,21 @@ textarea.form-control {
 }
 
 .chat-popup .chat-container .mine {
-    border: 2px solid #f34423;
-    background-color: #f34423;
+    border: 0px solid #f34423;
+    /* background-color: #f34423; */
     margin-left: 5%;
     width: 93%;
     color: white;
+    background: rgba(255, 255, 255, 0.06);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 4px 5px 6px 0px rgb(0 0 0 / 20%);
+    /* position: absolute; */
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .chat-popup .chat-container::after {
@@ -15018,4 +15113,340 @@ textarea.form-control {
 
 .speaker > img {
     filter: grayscale(100%);
+}
+ 
+
+/* Seccion de empresas */
+.container-empresas{
+    /* width: 90%;
+    height: 100vh;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px; */
+    width: 90%;
+    height: 100vh;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+  }
+  
+  
+  .item-empresas{
+    cursor: pointer;
+    /* box-shadow: 0 0 5px 0 rgba(0,0,0,.095); */
+    transition: all 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  .item-empresas::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+  }
+  
+  .item-empresas:hover:after{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .item-empresas:hover {
+    transform: scale(1.05);
+  }
+  
+  .item-text-empresas{
+    padding: 1em;
+  }
+  
+  
+  .item-img-empresas{
+    max-width: 100%;
+    display: block;
+  }
+  
+  
+  @media screen and (min-width: 590px) {
+    
+    .container-empresas{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  
+  
+  
+  @media screen and (min-width: 960px) {
+    
+    .container-empresas{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+  }
+  /* Seccion de agenda */
+  #main-container-agent{
+	margin: 0 auto;
+	width: 56%;
+    text-align: center;
+    margin-top: 110px;
+}
+
+table{
+	background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+    border-radius: 20px;
+}
+
+th, td{
+	padding: 8px;
+    text-align: center;
+}
+
+thead{
+	/* background-color: #246355;
+	border-bottom: solid 5px #0F362D;
+	color: white; */
+    color: white;
+    background-color: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(5px);
+}
+
+tr:nth-child(even){
+	background-color: rgba(255, 255, 255, -0.85);
+    backdrop-filter: blur(5px);
+}
+/* 
+tr:hover td{
+	background-color: #369681;
+	color: white;
+} */
+
+/* td{
+    color: #fff;
+} */
+.title-tabla > h2{
+    color: #fff;
+    font-weight: bold;
+}
+.contenedorlista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* SECCION HOME NUEVO */
+section {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+}
+
+section:nth-of-type(1) {
+    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+section:nth-of-type(2) {
+    background: url(../images/back_Agenda_Patrocinadores.png) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+section:nth-of-type(3) {
+    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+section:nth-of-type(4) {
+    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    height: 100vh;
+    width: 100%;
+    padding-top: 90px;
+}
+
+.buttonpatrocinador{
+    width: 100%;
+	height: 40px;
+	/* background-color: #492c88; */
+	border-radius: 25px;
+	transition: all 0.4s;
+	border: none;
+	background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    z-index: 99999;
+}
+.buttonpatrocinador > .patrocinador-name{
+	color: white;
+	font-weight: bold;
+}
+
+.buttonconf-patrocinador{
+    padding: 0px 30px 20px 30px;
+    width: 100%;
+    z-index: 99999;
+    border: none;
+}
+
+.item-empresas:hover .buttonpatrocinador{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
+
+
+
+
+/* MODAL VIDEO */
+
+.modal-videointro {
+	width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    left: 0;
+    display: flex;
+    animation: modal 2s 3s forwards;
+}
+
+.contenido {
+	margin: auto;
+    width: 70%;
+    height: 64%;
+    background: white;
+    border-radius: 10px;
+}
+
+#cerrar {
+	display: none;
+}
+
+#cerrar + label {
+	position: fixed;
+	color: #fff;
+	font-size: 25px;
+	z-index: 50;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	right: 150px;
+	top: 150px;
+	cursor: pointer;
+    font-weight: bold;
+	
+	animation: modal 2s 3s forwards;
+	/* visibility: hidden;
+	opacity: 0; */
+}
+
+#cerrar:checked + label, #cerrar:checked ~ .modal-videointro {
+	display: none;
+}
+
+@keyframes modalDialog {
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+
+
+/* otro modal */
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 58.8%;
+    height: 67%;
+    display: flex;
+    box-shadow: 1px 1px 4px 2px rgb(197 119 119 / 20%);
+    position: relative;
+    margin: 6% auto;
+    
+    /* border-radius: 10px; */
+    /* background: #e6e6e6; */
+    background: -moz-linear-gradient(#fff, #999);
+    /* background: -webkit-linear-gradient(#fff, #999); */
+    background: -o-linear-gradient(#fff, #999);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
 }

@@ -2,295 +2,426 @@
 
 @section('javascripts')
     <script src="{{ url('js/main.v2.js') }}"></script>
+    <script type="text/javascript" src=" {{ asset('js/JQuery3.3.1.js') }}"></script>
+    <script type="text/javascript" src=" {{ asset('js/lightslider.js') }}"></script>    
+    <script src="{{ asset('js/script.js') }}" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('#exampleModalCenter').modal('show');
+        });
+    </script>
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href=" {{ asset('css/stylescrollet.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/lightslider.css') }}"/>
+@endsection
+
+
 @section('content')
-    <div class="nomove">
-        <section class="hero-wrap degree-right js-fullheight" id="new">
-            <div class="fondo">
-                <div class="slider-item js-fullheight">
-                    <div class="row no-gutters slider-text js-fullheight align-items-center">
-                        <div class="col-md-12 ftco-animate">
-                            <div class="text aliniacion">
-                                <h1 class="mb-4 edittext">Click para ver el evento</h1>
-                                {{-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> --}}
-                                {{-- <p class="mb-0"><a href="{{ $configuration->video_url }}" class="playbutton img-video popup-vimeo d-flex align-items-center justify-content-center" data-autoplay="true" data-vbtype="video">
-                                        <span class="fa fa-play" style="color: black;"></span>
-                                    </a></p>
-                                    <p class="mb-0"></p> --}}
+        <!-- Sección 1 -->
+    {{-- <section id="seccion-1">
+        <div class="nomove"> --}}
+            <section class="hero-wrap degree-right js-fullheight" id="home">
+                        <div class="container-empresas">
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/CORNING.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>9:50 – 10:30</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    {{-- <p class="mb-0"><a href="https://8x8.vc/cwamx/jrivera" class="playbutton img-video popup-vimeo d-flex align-items-center justify-content-center" data-autoplay="true" data-vbtype="video">
+                                        <span class="patrocinador-name">INGRESE AQUI</span>
+                                    </a></p> --}}
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                            
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/EYENET.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>10:40 – 11:20</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item-empresas">
+                              <img src="{{ asset('images/empresas/FIBRASOPTICAS.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                              <div class="details">
+                                <p>11:30 – 12:10</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/IKUSI.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>12:20 – 13:00</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/KIO.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>13:10 – 13:50</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/MICROSOFT.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>14:00 – 14:40</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/MIRADA.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>14:50 – 15:30</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                              
+                              <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/RGO.png') }}" alt="" class="item-img-empresas" style="width: 70px; margin: auto;">
+                                <div class="details">
+                                    <p>15:40 – 16:20</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                              
+                            <div class="item-empresas">
+                                <img src="{{ asset('images/empresas/TREKTEL.png') }}" alt="" class="item-img-empresas" style="width: 130px; margin: auto;">
+                                <div class="details">
+                                    <p>16:30 – 17:10</p>
+                                </div>
+                                <div class="buttonconf-patrocinador">
+                                    <a href="#seccion-4">
+                                        <button type="submit" class="buttonpatrocinador">
+                                            <span class="patrocinador-name">INGRESE AQUI</span>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                          </div>
+            </section>
+            
+            <section id="seccion-3">
+                <div class="contenedorlista">
+                    <div id="main-container-agent">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="border-radius: 20px 0px 0px 0px;">Horario</th>
+                                    <th>Actividad</th>
+                                    <th style="border-radius: 0px 20px 0px 0px;">Tema y expositor</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>9:00 – 9:40</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9:50 – 10:30</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10:40 – 11:20</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>11:30 – 12:10</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>12:20 – 13:00</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>13:10 – 13:50</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14:00 – 14:40</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>14:50 – 15:30</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>15:40 – 16:20</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>16:30 – 17:10</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
                     </div>
-                </div>
             </div>
         </section>
-    </div>
 
-    <section class="ftco-section animated fadeInDown" id="new1">
-        <div class="container">
-            <div class="videocondference" style="width: 100%; height: 600px;">
+
+        <!-- Sección 2 -->
+        <section id="seccion-2">
+                <div class="container-empresas">
+                    <div class="item-empresas">
+                        <img src="{{ asset('images/empresas/CORNING.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </div>
+                    
+                    <div class="item-empresas">
+                        <img src="{{ asset('images/empresas/EYENET.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </div>
+                    
+                    <div class="item-empresas">
+                    <img src="{{ asset('images/empresas/FIBRASOPTICAS.png') }}" alt="" class="item-img-empresas" style="width: 170px;">
+                    </div>
+
+                    <a href="#opc1" class="item-empresas">
+                        <img src="{{ asset('images/empresas/IKUSI.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </a>
+                    
+                    <div class="item-empresas">
+                    <img src="{{ asset('images/empresas/KIO.png') }}" alt="" class="item-img-empresas" style="width: 142px;">
+                    </div>
+                    
+                    <a href="#microsoft" class="item-empresas">
+                        <img src="{{ asset('images/empresas/MICROSOFT.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </a>
+
+                    <div class="item-empresas">
+                        <img src="{{ asset('images/empresas/MIRADA.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </div>
+                    
+                    <div class="item-empresas">
+                        <img src="{{ asset('images/empresas/RGO.png') }}" alt="" class="item-img-empresas" style="width: 100px;">
+                    </div>
+                    
+                    <div class="item-empresas">
+                        <img src="{{ asset('images/empresas/TREKTEL.png') }}" alt="" class="item-img-empresas" style="width: 200px;">
+                    </div>
+                </div>
+        </section>
+
+        <!-- Sección 3 -->
+
+        <section id="seccion-4">
+            <div class="video-conferencia" style="width: 100%; height: 100vh;">
                 <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://8x8.vc/cwamx/jrivera" style="height: 100%; width: 100%; border: 0px;"></iframe>
             </div>
-            {{-- <div class="row justify-content-center no-gutters">
-                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-                    <h2 class="mb-2">Bienvenida</h2>
-                </div>
-            </div>
+        </section>
+        
+    
 
-            <div class="row">
-                <div class="col-md d-flex align-items-stretch ftco-animate pl-2 pr-2">
-                    <div class="media block-6 w-100 services d-block text-left">
-                        <div class="media-body py-md-3">
-                            <h2 class="mb-2 welcomeuser d-none d-md-inline-block">Bienvenido al Kick Off 2021: <?= auth()->user()->fullname; ?></h2>
-                            <h2 class="mb-2 welcomeuser d-inline-block d-md-none text-center">Bienvenido al Kick Off 2021: <?= auth()->user()->fullname; ?></h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row wrap-about m-0 d-flex d-md-none" style="margin-bottom: -50px!important;">
-                <div class="col-12 text-center">
-                    <img style="" class="img" src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
-                </div>
-            </div>
-            <div class="row wrap-about m-0 my-5">
-                <div class="col-12">
-                    <img style="max-height: 300px; padding-right: 40px;" class="d-none d-md-block img pull-left" src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
-                    <p style="color: black;font-size: 1.3rem;padding: 15px;">“A todo el equipo de la BEI y a nuestros invitados les doy la más cordial bienvenida a nuestro Kick Off Digital BEI 2021. A lo largo de la sesión platicaremos sobre los retos y prioridades que juntos enfrentaremos este año
-                        y aprovecharemos la oportunidad para reconocer a
-                        los colaboradores que durante el año 2020 marcaron la diferencia...”</p>
-                    <h5 class="mt-2">¡Bienvenidos!</h5>
-                </div>
-            </div> --}}
-        </div>
-    </section>
 
-    {{-- <section class="ftco-section testimony-section" id="speakers">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-3">Presentadores</h2>
+    {{-- <div class="fondo">
+            <div class="container-arana">
+                    <ul id="autoWidth" class="cs-hidden" style="width: 6460px; transform: translate3d(-1520px, 0px, 0px); height: 521px; padding-bottom: 0%;">
+                <li class="item-a">
+                    <div class="box">
+                        <img src="{{ asset('images/empresas/CORNING.png') }}" class="model" style="width: 220px; margin: auto;">
+                        <div class="details">
+                            <p>9:50 – 10:30</p>
+                        </div>
+                        <div class="buttonconf">
+                            <a href="{{ route('conferencia') }}">
+                                <button type="submit" class="login100-form-btn">
+                                    <span class="bob">INGRESE AQUI</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="item-a">
+                    <div class="box">
+                        <img src="{{ asset('images/empresas/EYENET.png') }}" class="model" style="width: 200px; margin: auto;">
+                        <div class="details">
+                            <p>10:40 – 11:20</p>
+                        </div>
+                        <div class="buttonconf">
+                            <a href="{{ route('conferencia') }}">
+                                <button type="submit" class="login100-form-btn">
+                                    <span class="bob">INGRESE AQUI</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                        <img src="{{ asset('images/empresas/FIBRASOPTICAS.png') }}" class="model" style="width: 170px; margin: auto;">
+                        <div class="details">
+                            <p>11:30 – 12:10</p>
+                        </div>
+                        <div class="buttonconf">
+                            <a href="{{ route('conferencia') }}">
+                                <button type="submit" class="login100-form-btn">
+                                    <span class="bob">INGRESE AQUI</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    </li>
+                <li class="item-a">
+                    <div class="box">
+                    <img src="{{ asset('images/empresas/IKUSI.png') }}" class="model" style="width: 200px; margin: auto;">
+                    <div class="details">
+                    <P>12:20 – 13:00</P>
                 </div>
+                <div class="buttonconf">
+                    <a href="{{ route('conferencia') }}">
+                        <button type="submit" class="login100-form-btn">
+                            <span class="bob">INGRESE AQUI</span>
+                        </button>
+                    </a>
+                </div>
+                    
+                    </div>
+                </li>
+                <li class="item-a">
+                    <div class="box">
+                    <img src="{{ asset('images/empresas/KIO.png') }}" class="model" style="width: 142px; margin: auto;">
+                    <div class="details">
+                        <P>13:10 – 13:50</P>
+                </div>
+                <div class="buttonconf">
+                    <a href="{{ route('conferencia') }}">
+                        <button type="submit" class="login100-form-btn">
+                            <span class="bob">INGRESE AQUI</span>
+                        </button>
+                    </a>
+                </div>
+                    
+                    </div>
+                    </li>
+                <li class="item-a">
+                    <div class="box">
+                    <img src="{{ asset('images/empresas/MICROSOFT.png') }}" class="model" style="width: 200px; margin: auto;">
+                    <div class="details">
+                        <P>14:00 – 14:40</P>
+                </div>
+                <div class="buttonconf">
+                    <a href="{{ route('conferencia') }}">
+                        <button type="submit" class="login100-form-btn">
+                            <span class="bob">INGRESE AQUI</span>
+                        </button>
+                    </a>
+                </div>
+                    
+                    </div>
+                </li>
+
+                <li class="item-a">
+                    <div class="box">
+                      <img src="{{ asset('images/empresas/MIRADA.png') }}" class="model" style="width: 200px; margin: auto;">
+                      <div class="details">
+                        <P>14:50 – 15:30</P>
+                      </div>
+                      <div class="buttonconf">
+                        <a href="{{ route('conferencia') }}">
+                            <button type="submit" class="login100-form-btn">
+                                <span class="bob">INGRESE AQUI</span>
+                            </button>
+                        </a>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="item-a">
+                      <div class="box">
+                        <img src="{{ asset('images/empresas/RGO.png') }}" class="model" style="width: 100px; margin: auto;">
+                        <div class="details">
+                            <P>15:40 – 16:20</P>
+                        </div>
+                        <div class="buttonconf">
+                            <a href="{{ route('conferencia') }}">
+                                <button type="submit" class="login100-form-btn">
+                                    <span class="bob">INGRESE AQUI</span>
+                                </button>
+                            </a>
+                        </div>
+                      </div>
+                </li>
+
+                <li class="item-a">
+                      <div class="box">
+                        <img src="{{ asset('images/empresas/TREKTEL.png') }}" class="model" style="width: 200px; margin: auto;">
+                        <div class="details">
+                            <P>16:30 – 17:10</P>
+                        </div>
+                        <div class="buttonconf">
+                            <a href="{{ route('conferencia') }}">
+                                <button type="submit" class="login100-form-btn">
+                                    <span class="bob">INGRESE AQUI</span>
+                                </button>
+                            </a>
+                        </div>
+                      </div>
+                  </li>
+                </ul>           
             </div>
-            <div class="row  ftco-animate">
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('images/presentadores/OPC1.png') ?>" alt="Speaker 1" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc1">Fernando Quesada Gómez</a></h3>
-                            <p>Director General Adjunto de Banca de Empresas</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('images/presentadores/OPC2.png') ?>" alt="Speaker 2" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc2">Javier Rodríguez Ardila</a></h3>
-                            <p>Director Ejecutivo Segmento Empresas y Estrategia BEI</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('images/presentadores/OPC3.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc3">Luis Alberto Castellanos</a></h3>
-                            <p>Director Ejecutivo Regional Centro</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('images/presentadores/OPC4.png') ?>" alt="Speaker 1" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc4">Enrique Victorica</a></h3>
-                            <p>Director Ejecutivo Regional Metro Norte</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('public/images/presentadores/OPC5.png') ?>" alt="Speaker 2" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc5">Ricardo Valle</a></h3>
-                            <p>Director Ejecutivo Regional Metro Sur</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC6.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc6">Luis Mendiola</a></h3>
-                            <p>Director Ejecutivo Regional Noreste</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('public/images/presentadores/OPC7.png') ?>" alt="Speaker 1" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc7">Alejandro Vázquez</a></h3>
-                            <p>Director Ejecutivo Regional Noroeste</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('public/images/presentadores/OPC8.png') ?>" alt="Speaker 2" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc8">Humberto Pereira</a></h3>
-                            <p>Director Ejecutivo Regional Norte</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC9.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc9">Alejandro Romano </a></h3>
-                            <p>Director Ejecutivo Regional Occidente</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('public/images/presentadores/OPC10.png') ?>" alt="Speaker 1" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc10">Verónica Castellanos</a></h3>
-                            <p>Director Ejecutivo Regional Sur</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('public/images/presentadores/OPC11.png') ?>" alt="Speaker 2" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc11">Jesús Valderrama</a></h3>
-                            <p>Director Ejecutivo Regional Sureste</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC12.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc12">Antonio Basagoiti Pastor</a></h3>
-                            <p>Director Ejecutivo de Grandes Empresas</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                        <img src="<?= url('public/images/presentadores/OPC13.png') ?>" alt="Speaker 1" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc13">Pilar Herrera Ludeña</a></h3>
-                            <p>CEO de Negocio Instituciones y Sector Público</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                        <img src="<?= url('public/images/presentadores/OPC14.png') ?>" alt="Speaker 2" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc14">Martín Eduardo Villarreal</a></h3>
-                            <p>Director Ejecutivo de Soluciones Financieras</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC15.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc15">Rodolfo Hernández Sada</a></h3>
-                            <p>Director Ejecutivo de Negocio Internacional y Agronegocios</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC16.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc16">Marcos Abal</a></h3>
-                            <p>Director Ejecutivo Banca Transaccional</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC17.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc17">Iván Riva Palacio</a></h3>
-                            <p>Director Ejecutivo de Estrategia Comercial BEI</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                        <img src="<?= url('public/images/presentadores/OPC18.png') ?>" alt="Speaker 3" class="img-fluid">
-                        <div class="details">
-                            <h3><a href="#opc18">Michael Goeters</a></h3>
-                            <p>Director Ejecutivo Santander Leasing</p>
-                            <div class="social">
-                                <a href=""><p>Santander México</p></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
+    </div> --}}
 
     {{-- <section class="ftco-section bg-light" id="new3">
         <div class="container">
@@ -526,9 +657,40 @@
         <div class="degree-left-footer"></div>
     </section> --}}
 
+    <div id="opc1" class="modalDialog">
+        <div class="card-container">
+            <a href="#close" title="Close" class="close">X</a>
+            <video src="videos/ikusi.mp4" controls style="width: 100%; height: 100%;" muted></video>
+            {{-- <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://8x8.vc/cwamx/jrivera" style="height: 100%; width: 100%; border: 0px;"></iframe> --}}
+        </div>
+    </div>
+
+
+    <div id="microsoft" class="modalDialog">
+        <div class="card-container">
+            <a href="#close" title="Close" class="close">X</a>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/297lKGQBBZA?autoplay=1&mute=1&loop=1" frameborder="0" allow="autoplay" encrypted-media allowfullscreen></iframe>
+        </div>
+    </div>
+
+    {{-- VIDEO DE ENTRADA A LA PAGINA --}}
+    <input type="checkbox" id="cerrar">
+		<label for="cerrar" id="btn-cerrar">X</label>
+		<div class="modal-videointro">
+			<div class="contenido">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/6Y0PMYwAH78?autoplay=1&mute=1&loop=1" frameborder="0" allow="autoplay" encrypted-media allowfullscreen></iframe>
+            </div>
+		</div>
+
+        
+          
+          <!-- Modal -->
+         
+
+
     @if (auth()->user()->acl_level < 100)
         <div class="btn-opc">
-            {{-- <img class="img-opc" src="{{ url('images/icons/conversacion.svg') }}" alt=""> --}}
+            <img class="img-opc" src="{{ url('images/iconsignoizzi.png') }}" alt="">
         </div>
         <div class="btn-opc2 d-none">
             <img class="img-opc" src="{{ url('images/icons/respuesta.svg') }}" alt="">
@@ -650,365 +812,4 @@
             </div>
         </div>
     @endif
-
-    <div id="opc1" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC1.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Fernando Quesada Gómez</h2>
-                <h4 class="cargouserr">Director General Adjunto de Banca de Empresas e Instituciones</h4>
-            </div>
-            <div class="descripcionuser">
-               
-            </div>
-        </div>
-    </div>
-
-    <div id="opc2" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC2.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Javier Rodríguez Ardila</h2>
-                <h4 class="cargouserr">Director Ejecutivo Segmento Empresas y Estrategia BEI</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">Licenciado en Economía por la Universidad Iberoamericana. Estudió los Diplomados en Financiamiento a Empresas y Contabilidad y Finanzas, ambas por el ITAM, así como, diplomado en Financiamiento Executive Private Banking por el London School of
-                    Economics y Gestión Integral del Talento por el ITESM.
-                    Actualmente ocupa el puesto de Director Ejecutivo Segmento Empresas y Estrategia BEI, mismo que desempeña desde el 2019.
-                    Con más de 13 años en Banco Santander México ha desempeñado puestos como Director de Large Corporates, Banca de Inversión, Director Regional y Director de Estrategia Comercial ambos en Banca Privada, entre otros.
-                    Ha ocupado puestos en distintas empresas como GNP, Financiera Rural y KPMG.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc3" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC3.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Luis Alberto Castellanos</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Centro</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Administración de Empresas por la Universidad del ITESO en Guadalajara.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Centro de Banca de Empresas e Instituciones, mismo que ocupa desde el 2016.
-                    Con 26 años de experiencia en el sector financiero, ha desempañado otros cargos directivos siempre en Banco Santander.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc4" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC4.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Enrique Victorica</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Metro Norte</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Contador Público con Maestría en Administración y Finanzas del ITESM y Especialidad en Banca en Luisiana State University.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Metro Norte de Banca de Empresas e Instituciones.
-                    Con 25 años de experiencia en Banca, inició su carrera en Bancomer previo a su reprivatización, Banorte y actualmente Santander.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc5" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC5.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Ricardo Valle</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Metro Sur</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Administración de Empresas y Maestro en Finanzas Corporativas, ambos por el ITAM.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Metro Sur de Banca de Empresas e Instituciones, mismo que ocupa desde el 2009.
-                    En Banco Santander México lleva 26 años de los cuales ha estado 12 años en todas las áreas de Riesgos y 14 años en Área Comercial.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc6" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC6.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Luis Mendiola</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Noreste</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Administración con un GMBA por la Universidad de Carolina del Sur y un posgrado en el Tec de Monterrey. Está certificado en Relación con Inversionistas por la Universidad de Nueva York.
-                    Actualmente desempeña el puesto de Director Regional Noreste de Banca de Empresas e Instituciones, mismo que desempeña desde 2017.
-                    Tiene más de 20 años de experiencia en el sector financiero, dentro de los cuales 16 los ha transcurrido en Banco Santander ocupando puestos importantes como Director Nacional de Agronegocios y Derivados en Santander Global Connect México y Director Ejecutivo de la Regional Norte
-                    de Banca de Empresas e Instituciones.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc7" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC7.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Alejandro Vázquez</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Noroeste</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Administración Financiera por el Tecnológico de Monterrey y Master in Finance por Tulane University, Nueva Orleans en Estados Unidos.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Noroeste de Banca de Empresas e Instituciones, mismo que desempeña desde 2017.
-                    Anteriormente, con 16 años de experiencia, ha desempeñado diversos puestos en Grupo Santander como FUDI con asignación en San Brasil en Áreas Centrales de Productos para Particulares y Director Zonal en la Regional Sureste de BEI.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc8" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC8.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Humberto Pereira</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Norte</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Administración con concentración en Gerencia Financiera, con Postgrado en Gestión de Instituciones Financieras y un MBA por ISEAD, asimismo es Diplomado en Derivados Financieros.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Norte de Banca de Empresas e Instituciones.
-                    Tiene más de 20 años de experiencia en la Banca en donde ha desempeñado posiciones en las áreas de Banca de Empresas, Riesgos, Debt Capital Markets y Banca de Inversión.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc9" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC9.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Alejandro Romano</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Occidente</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">Es Licenciado en Administración de Empresas por la Universidad del ITESO en Guadalajara.
-                    Actualmente ocupa el puesto de Director Ejecutivo Regional Occidente de Banca de Empresas e Instituciones, mismo que desempeña desde 2016.
-                    Anteriormente trabajó como Director Regional de Banca Privada en Santander durante cuatro años y medio.
-                    Con 25 años de experiencia en el Sector Financiero ha ocupado distintas posiciones en Banco HSBC.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc10" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC10.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Verónica Castellanos</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Sur</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciada en Sistemas Computarizados e informática, y cuenta con una especialidad en Finanzas, ambas por la Universidad Iberoamericana.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Sur de Banca de Empresas e Instituciones, mismo que desempeña desde 2014.
-                    Anteriormente, con 27 años en el sector financiero, y 20 años en Banco Santander México, ha desempeñado diversos puestos como Ejecutivo de Cuenta tanto en Empresas como en Instituciones y Directora Zonal de Banca de Empresas.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc11" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC11.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Jesús Valderrama</h2>
-                <h4 class="cargouserr">Director Ejecutivo Regional Sureste</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Contador Público con Especialidad en Finanzas por el ITESM y cuenta con un Master en Dirección Financiera en España y Santiago de Chile.
-                    Actualmente desempeña el puesto de Director Ejecutivo Regional Sureste de Banca de Empresas e Instituciones, mismo que desempeña desde 2013.
-                    Tiene más de 24 años de experiencia en el sector financiero dentro de Banco Santander ocupando puestos importantes como Director de Zona en Particulares y Pymes así como de Empresas y Director Ejecutivo Regional Norte en BEI.
-                    Trabajó 4 años en Banco Santander Chile.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc12" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC12.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Antonio Basagoiti Pastor</h2>
-                <h4 class="cargouserr">Director Ejecutivo de Grandes Empresas</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Derecho por la Universidad de Deusto en España, así como diversos cursos en Liderazgo de Gestión, Derivados Financieros y Banca.
-                    Actualmente ocupa el puesto de Director Ejecutivo de Grandes Empresas en Banco Santander México, mismo que desempeña desde 2016.
-                    Anteriormente ocupó cargos dentro de Grupo Santander como Head de Multinacionales en Global Corporate Banking y Director de Desarrollo de Negocio.
-                    También ha ocupado puestos importantes en la Dirección del INJUVE en el Ministerio de Trabajo y Asuntos Sociales del Gobierno de España, así como en Banco Central Hispano.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc13" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('images/presentadores/OPC13.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Pilar Herrera Ludeña</h2>
-                <h4 class="cargouserr">Director Ejecutivo de Negocio Instituciones y Sector Público</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">Es Licenciada en Economía por el ITESM Campus Monterrey y Maestra en Ciencias de la Administración con Especialidad en Finanzas por el ITESM Campus Estado de México.
-                    Actualmente ocupa el puesto de Director Ejecutivo de Negocio Instituciones y Sector Público en Banco Santander México, mismo que desempeña desde 2017.
-                    Anteriormente trabajó en distintas áreas como en Banca Corporativa durante 12 años y Banca de Sector Público por 16 años. Tiene 30 años de experiencia dentro de Grupo Santander.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc14" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC14.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Martín Eduardo Villarreal</h2>
-                <h4 class="cargouserr">Director Ejecutivo de Soluciones Financieras</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Economía por la Universidad Argentina de la Empresa y cuenta con un MBA por el Centro de Estudios Macroeconómicos Argentinos.
-                    Actualmente ocupa el puesto de Director Ejecutivo de Soluciones Financieras en Banco Santander México con responsabilidad sobre el Crédito y la Banca de Inversión, dentro de la Banca de Empresas e Instituciones, puesto que desempeña desde 2016.
-                    Anteriormente, y con 21 años en el Grupo Santander, ha desempeñado varios cargos de alto nivel en Argentina y Chile.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc15" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC15.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Rodolfo Hernández Sada</h2>
-                <h4 class="cargouserr">Director Ejecutivo de Negocio Internacional y Agronegocios</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Contador Público por la Escuela Bancaria y Comercial, con estudios en el Instituto Panamericano de Alta Dirección de Empresas (IPADE), en la Ciudad de México.
-                    Actualmente ocupa el puesto de Director Ejecutivo de Negocio Internacional y Agronegocios en Banco Santander México, mismo que desempaña desde el 2017.
-                    Anteriormente fue Director Ejecutivo de diferentes áreas como: Segmento Empresas, Sinergias y Productos Empresas dentro de Grupo Santander.
-                    Inició en la Banca hace 32 años, ocupando diferentes posiciones comerciales en la Banca Mayorista Global, siendo uno de los tres primeros “Global Account Officer” de México (Grupo Slim).
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc16" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC16.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Marcos Abal</h2>
-                <h4 class="cargouserr">Director Ejecutivo Banca Transaccional</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Economía por la Universidad de la República en Uruguay.
-                    Actualmente desempeña el puesto de Director Ejecutivo de Banca Transaccional, mismo que desempeña desde el 2017.
-                    Anteriormente ocupó distintos puestos dentro de Banco Santander en distintos países, como son Analista de Riesgos en Uruguay; Ejecutivo de Cuenta Banca Corporativa en Brasil y algunos cargos directivos en México como Director Regional Pyme y Director Zonal de BEI.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc17" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC17.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Iván Riva Palacio</h2>
-                <h4 class="cargouserr">Director Ejecutivo de Estrategia Comercial BEI</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">
-                    Es Licenciado en Economía por el ITAM y con un MBA por el IESE Business School en Barcelona.
-                    Actualmente desempeña el puesto de Director Ejecutivo de Estrategia Comercial BEI, teniendo a su cargo el Negocio ROF, Negocio Adquirente y Nómina de la BEI, así como las Sinergias con otras Bancas, mismo que desempeña desde 2017.
-                    Anteriormente, con más de 19 años en el Sector Financiero, y 13 años en Banco Santander México, ha desempeñado diversos cargos directivos dentro del Banco como Director de Modelo Comercial de PyP,  Especialista en Tesorería, y Director Zonal Banca de Empresas.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div id="opc18" class="modalDialog">
-        <div class="card-container">
-            <a href="#close" title="Close" class="close">X</a>
-            <div class="headerpro">
-                <a href="#">
-                    <img src="<?= url('public/images/presentadores/OPC18.png') ?>" alt="">
-                </a>
-                <h2 class="nameuserr">Michael Goeters</h2>
-                <h4 class="cargouserr">Director Ejecutivo Santander Leasing</h4>
-            </div>
-            <div class="descripcionuser">
-                <p style="text-align: justify;">Es Licenciado en Administración de Empresas por la Universidad Intercontinental. Tiene estudios de especialidad estratégica y de negocios por el Wharton School, en la Universidad de Pensylvania.
-                     
-                    Actualmente desempeña el puesto de Director Ejecutivo de Arrendamiento en Santander Leasing, mismo que desempeña desde el 2019.
-                     
-                    Tiene 30 años de experiencia en el sector financiero, pasando por diferentes áreas entre las que destaca Banca de Empresas, Factoraje y la mayor parte en Arrendamiento.
-                </p>
-            </div>
-        </div>
-    </div>
 @endsection

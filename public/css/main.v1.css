@@ -25,9 +25,6 @@
     src: url('../fonts/poppins/Poppins-SemiBold.ttf');
 }
 
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
@@ -177,8 +174,9 @@ iframe {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-image: url('../images/izziback.jpg');
+    background-image: url('../images/loginnuevoizzi.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -514,4 +512,24 @@ iframe {
         visibility: visible;
         opacity: 1;
     }
+}
+
+
+input:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: -internal-light-dark(black, white) !important;
+}
+
+input[type="text" i]{
+    padding: 1px 2px;
+    background: transparent !important;
+}
+
+.lotginstyle{
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
 }

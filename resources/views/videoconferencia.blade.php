@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Izzi Tendencias 2021</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url('css/animate.css') }}">
+    <link rel="shortcut icon" href="{{ url('images/icons/iconoizzi.svg') }}" title="Favicon"/>
+    <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url('css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url('css/style.v1.css') }}">
+    {{-- <link rel="stylesheet" href="{{ url('css/newstyle.v1.css') }}"> --}}
+    
+    @yield('css')
+    <script src="https://kit.fontawesome.com/f8cbe70404.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light animate__animated animate__fadeInDown {{ !request()->is('/') ? 'scrolled awake' : '' }}" id="ftco-navbar">
+    <div class="container">
+        <!--Logo that is shown on the banner-->
+        <img src="<?= url('images/logoizzi.png') ?>" class="banner-logo" alt="Landing Page">
+        <!--End of Banner Logo-->
+        <!--<a class="navbar-brand" href="index.html">a<span>v</span>o</a>-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+            <!--<span class="oi oi-menu"></span> Menu-->
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                {{-- <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li>  --}}
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="#home" class="nav-link">Sesiones</a></li>
+                <li class="nav-item {{ request()->is('/#seccion-3') ? 'active' : '' }}"><a href="#seccion-3" class="nav-link">Agenda</a></li>
+                <li class="nav-item {{ request()->is('/#seccion-2') ? 'active' : '' }}"><a href="" class="nav-link">Patrocinadores</a></li>
+                
+                
+                @if (auth()->user()->acl_level === 100)
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Administrar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-user">
+                            <a class="dropdown-item" href="{{ route('chat') }}">Chat</a>
+                            <a class="dropdown-item" href="{{ route('configuration') }}">Configuración</a>
+                            <a class="dropdown-item" href="{{ route('register') }}">Registro</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}">Salir</a>
+                        </div>
+                    </li>
+                @else
+                    <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Salir</a></li>
+                @endif
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="fondopatrocinador">
+    <div class="video-conferencia" style="width: 100%; height: 100vh;">
+        <iframe allow="camera; microphone; fullscreen; display-capture; autoplay" src="https://8x8.vc/cwamx/jrivera" style="height: 100%; width: 100%; border: 0px;"></iframe>
+    </div>
+</div>
+
+@if (auth()->user()->acl_level < 100)
+    <div class="btn-opc">
+        <img class="img-opc" src="{{ url('images/icons/conversacion.svg') }}" alt="">
+    </div>
+    <div class="btn-opc2 d-none">
+        <img class="img-opc" src="{{ url('images/icons/respuesta.svg') }}" alt="">
+    </div>
+@endif
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+    </svg>
+</div>
+
+@if (auth()->user()->acl_level < 100)
+    <div class="chat-popup" id="chat-popup" data-sync="{{ route('read_messages') }}" data-sender="{{ auth()->user()->id }}" data-from="0" data-to="{{ date('U') }}">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="chat-container"></div>
+        <div class="mt-1 chat-control">
+            <form action="{{ route('send_message') }}" class="form-container">
+                <input placeholder="Mensaje a soporte tecnico" name="message" required></textarea>
+                <button type="submit" class="btn"><i class="fa fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="response-popup" id="response-popup">
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <form action="/receiver_sync.php" class="form-container">
+            <div class="response-container">
+                <h4>Respuestas</h4>
+                <div class="response-row">
+                    <div>1:</div>
+                    <div>
+                        <button type="button" class="btn">A</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">B</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">C</button>
+                    </div>
+                    <div>
+                        <button type="button" data-mark="1" class="btn">D</button>
+                    </div>
+                </div>
+                <div class="response-row">
+                    <div>2:</div>
+                    <div>
+                        <button type="button" class="btn">A</button>
+                    </div>
+                    <div>
+                        <button type="button" data-mark="1" class="btn">B</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">C</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">D</button>
+                    </div>
+                </div>
+                <div class="response-row">
+                    <div>3:</div>
+                    <div>
+                        <button type="button" class="btn">A</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">B</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn" data-mark="1">C</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">D</button>
+                    </div>
+                </div>
+                <div class="response-row">
+                    <div>4:</div>
+                    <div>
+                        <button type="button" class="btn">A</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">B</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">C</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">D</button>
+                    </div>
+                </div>
+                <div class="response-row">
+                    <div>5:</div>
+                    <div>
+                        <button type="button" data-mark="1" class="btn">A</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">B</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">C</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn">D</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-1 chat-control">
+                <button type="submit" class="btn w-100">Enviar</button>
+            </div>
+        </form>
+
+        <div class="alert alert-success" style="display: none;">
+            <strong>Gracias por comunicarse!</strong> Hemos registrado su pregunta.
+        </div>
+    </div>
+@endif
+
+{{-- <footer class="ftco-footer ftco-section">
+    <div class="container">
+        <!--<div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Santander</h2>
+                    <p>Far far away, behind the word mountains, far from the countries.</p>
+                    <ul class="ftco-footer-social list-unstyled mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Community</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Team</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Reviews</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">About Us</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Our Story</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Meet the team</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Company</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Press</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                        <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon fa fa-map"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+                            <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                            <li><a href="#"><span class="icon fa fa-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | CWA 2021
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer> --}}
+
+<script src="{{ url('js/jquery.min.js') }}"></script>
+<script src="{{ url('js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ url('js/popper.min.js') }}"></script>
+<script src="{{ url('js/bootstrap.min.js') }}"></script>
+<script src="{{ url('js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url('js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url('js/jquery.stellar.min.js') }}"></script>
+<script src="{{ url('js/owl.carousel.min.js') }}"></script>
+<script src="{{ url('js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ url('js/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ url('js/scrollax.min.js') }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{{ url('js/google-map.js') }}"></script>
+<script src="{{ url('js/main.v2.js') }}"></script>
+@yield('javascripts')
+</body>
+</html>
+
+
+@section('content')
+    
+@endsection

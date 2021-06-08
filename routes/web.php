@@ -30,4 +30,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/chat/users', ['as' => 'chat_users', 'uses' => 'ChatController@users']);
     Route::get('/chat/messages', ['as' => 'chat_messages', 'uses' => 'ChatController@messages']);
     Route::post('/chat', ['as' => 'post_message', 'uses' => 'ChatController@handle']);
+
+    Route::get('/register', ['as' => 'register', 'uses' => 'RegistroController@index']);
+    Route::post('/register', 'RegistroController@handle')->name('registro');
+
+
+    Route::get('/patrocinadores', function () {
+        return view('patrocinador');
+    })->name('patrocinadores');
+
+    Route::get('/agenda', function () {
+        return view('agenda');
+    })->name('agenda');
+
+    Route::get('/conferencia', function () {
+        return view('videoconferencia');
+    })->name('conferencia');
 });

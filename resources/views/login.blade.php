@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Kick Off 2021</title>
+    <title>Izzi Tendencias 2021</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="{{ url('images/Santander.svg') }}"/>
+    <link rel="icon" type="image/png" href="{{ url('images/icons/iconoizzi.svg') }}"/>
     <link rel="stylesheet" type="text/css" href="{{  asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{  asset('fonts/iconic/css/material-design-iconic-font.min.css') }}">
@@ -28,16 +28,16 @@
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate="Ingresar correo valido">
+                    <span class="lotginstyle" data-placeholder="Email">Email</span>
                     <input class="input100" type="text" name="email" value="">
-                    <span class="focus-input100" data-placeholder="Email"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Ingresar una contraseña">
+                    <span class="lotginstyle" data-placeholder="Password">Password</span>
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
                     <input class="input100" type="password" name="password" value="">
-                    <span class="focus-input100" data-placeholder="Password"></span>
                 </div>
 
                 {{-- <div class="text-uppercase text-center" style="font-size: 0.8rem;">

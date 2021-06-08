@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Kick Off 2021</title>
+    <title>Izzi Tendencias 2021</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ url('css/animate.css') }}">
-    {{-- <link rel="shortcut icon" href="{{ url('images/Santander.svg') }}" title="Favicon"/> --}}
+    <link rel="shortcut icon" href="{{ url('images/icons/iconoizzi.svg') }}" title="Favicon"/>
     <link rel="stylesheet" href="{{ url('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ url('css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ url('css/style.v1.css') }}">
+    {{-- <link rel="stylesheet" href="{{ url('css/newstyle.v1.css') }}"> --}}
+    
     @yield('css')
     <script src="https://kit.fontawesome.com/f8cbe70404.js" crossorigin="anonymous"></script>
 </head>
@@ -20,7 +22,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light animate__animated animate__fadeInDown {{ !request()->is('/') ? 'scrolled awake' : '' }}" id="ftco-navbar">
     <div class="container">
         <!--Logo that is shown on the banner-->
-        {{-- <img src="<?= url('images/Santanderrojo.svg') ?>" class="banner-logo" alt="Landing Page"> --}}
+        <img src="<?= url('images/logoizzi.png') ?>" class="banner-logo" alt="Landing Page">
         <!--End of Banner Logo-->
         <!--<a class="navbar-brand" href="index.html">a<span>v</span>o</a>-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +32,12 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                {{-- <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li> --}}
-                <li class="nav-item"><a href="{{ route('homepage') }}" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="#new1" class="nav-link">Meetings</a></li>
-                {{-- <li class="nav-item"><a href="#new1" class="nav-link">Bienvenida</a></li>
-                <li class="nav-item"><a href="#speakers" class="nav-link">Sesiones</a></li>
-                <li class="nav-item"><a href="#new3" class="nav-link">Agenda</a></li>
-                <li class="nav-item"><a href="#new3" class="nav-link">Patrocinadores</a></li> --}}
+                {{-- <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li>  --}}
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="#home" class="nav-link">Sesiones</a></li>
+                <li class="nav-item {{ request()->is('/#seccion-3') ? 'active' : '' }}"><a href="#seccion-3" class="nav-link">Agenda</a></li>
+                <li class="nav-item {{ request()->is('/#seccion-2') ? 'active' : '' }}"><a href="#seccion-2" class="nav-link">Patrocinadores</a></li>
+                
+                
                 @if (auth()->user()->acl_level === 100)
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="dropdown-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +46,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdown-user">
                             <a class="dropdown-item" href="{{ route('chat') }}">Chat</a>
                             <a class="dropdown-item" href="{{ route('configuration') }}">Configuración</a>
+                            <a class="dropdown-item" href="{{ route('register') }}">Registro</a>
                             <a class="dropdown-item" href="{{ route('logout') }}">Salir</a>
                         </div>
                     </li>
@@ -58,7 +60,7 @@
 
 @yield('content')
 
-<footer class="ftco-footer ftco-section">
+{{-- <footer class="ftco-footer ftco-section">
     <div class="container">
         <!--<div class="row mb-5">
             <div class="col-md">
@@ -127,7 +129,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 
 <script src="{{ url('js/jquery.min.js') }}"></script>
 <script src="{{ url('js/jquery-migrate-3.0.1.min.js') }}"></script>
