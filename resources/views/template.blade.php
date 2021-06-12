@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <title>Izzi Tendencias 2021</title>
+    <title>izzi Tendencias 2021</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -33,9 +33,10 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 {{-- <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="{{ request()->is('/') ? '#new' : route('homepage') }}" class="nav-link">Inicio</a></li>  --}}
-                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="#home" class="nav-link">Sesiones</a></li>
+                
                 <li class="nav-item {{ request()->is('/#seccion-3') ? 'active' : '' }}"><a href="#seccion-3" class="nav-link">Agenda</a></li>
                 <li class="nav-item {{ request()->is('/#seccion-2') ? 'active' : '' }}"><a href="#seccion-2" class="nav-link">Patrocinadores</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href="#home" class="nav-link">Sesión</a></li>
                 
                 
                 @if (auth()->user()->acl_level === 100)

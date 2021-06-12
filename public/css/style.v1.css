@@ -11898,6 +11898,7 @@ h1, h2, h3, h4, h5,
     left: 0;
     top: 0;
     margin-top: -130px;
+    z-index: 999999;
     background: #d40571 !important;
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -14264,7 +14265,6 @@ textarea.form-control {
 
 .banner-logo {
     width: 160px;
-    padding-bottom: 9px;
 }
 
 .btn-opc {
@@ -14764,6 +14764,9 @@ textarea.form-control {
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modalDialog:target {
@@ -14772,13 +14775,19 @@ textarea.form-control {
 }
 
 .modalDialog > div {
-    width: 60%;
-    height: 67%;
+    width: 62%;
+    margin-top: 90px;
+    height: 78%;
     display: flex;
     box-shadow: 1px 1px 4px 2px rgb(197 119 119 / 20%);
     position: relative;
-    margin: 6% auto;
-    
+    /* margin: 19% auto; */
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 20px;
     /* border-radius: 10px; */
     /* background: #e6e6e6; */
     background: -moz-linear-gradient(#fff, #999);
@@ -14790,8 +14799,8 @@ textarea.form-control {
 }
 
 .close {
-    background: #606061;
-    color: #FFFFFF;
+    background: #fff;
+    color: #000;
     line-height: 25px;
     position: absolute;
     right: -12px;
@@ -15115,7 +15124,12 @@ textarea.form-control {
     filter: grayscale(100%);
 }
  
-
+/* .izzipatro11{
+    height: 13%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+} */
 /* Seccion de empresas */
 .container-empresas{
     /* width: 90%;
@@ -15129,15 +15143,15 @@ textarea.form-control {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px; */
     width: 90%;
-    height: 100vh;
+    height: 60vh;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 90px;
-    padding-bottom: 10px;
+    /* padding-top: 90px; */
+    /* padding-bottom: 10px; */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 5px;
+    grid-gap: 12px;
   }
   
   
@@ -15146,11 +15160,27 @@ textarea.form-control {
     /* box-shadow: 0 0 5px 0 rgba(0,0,0,.095); */
     transition: all 300ms;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
   }
   
+.contenidosec2title{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    /* border: 1px solid red; */
+    display: flex;
+    /* padding-left: 10px; */
+    padding-top: 82px;
+    justify-content: center;
+  }
+  
+  .contpatro > h2{
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+  }
   
   .item-empresas::after {
     content: "";
@@ -15207,7 +15237,6 @@ textarea.form-control {
 	margin: 0 auto;
 	width: 56%;
     text-align: center;
-    margin-top: 110px;
 }
 
 table{
@@ -15249,6 +15278,7 @@ tr:hover td{
 .title-tabla > h2{
     color: #fff;
     font-weight: bold;
+    font-size: 22px;
 }
 .contenedorlista{
     display: flex;
@@ -15273,27 +15303,27 @@ section {
 }
 
 section:nth-of-type(1) {
-    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    background: url(../images/fondo2.png) no-repeat center top;
     height: 100vh;
     width: 100%;
     background-size: cover;
 }
 
 section:nth-of-type(2) {
-    background: url(../images/back_Agenda_Patrocinadores.png) no-repeat center top;
+    background: url(../images/fondo2.png) no-repeat center top;
     height: 100vh;
     width: 100%;
     background-size: cover;
 }
 
 section:nth-of-type(3) {
-    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    background: url(../images/fondo2.png) no-repeat center top;
     height: 100vh;
     width: 100%;
     background-size: cover;
 }
 section:nth-of-type(4) {
-    background: url(../images/SESIONES_PATROCINADORES.jpg) no-repeat center top;
+    background: url(../images/fondo2.png) no-repeat center top;
     height: 100vh;
     width: 100%;
     padding-top: 90px;
@@ -15346,6 +15376,7 @@ section:nth-of-type(4) {
     left: 0;
     display: flex;
     animation: modal 2s 3s forwards;
+    z-index: 999999;
 }
 
 .contenido {
@@ -15372,7 +15403,7 @@ section:nth-of-type(4) {
 	top: 150px;
 	cursor: pointer;
     font-weight: bold;
-	
+	z-index: 999999999;
 	animation: modal 2s 3s forwards;
 	/* visibility: hidden;
 	opacity: 0; */
@@ -15393,7 +15424,7 @@ section:nth-of-type(4) {
 
 
 /* otro modal */
-.modalDialog {
+/* .modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
@@ -15415,22 +15446,19 @@ section:nth-of-type(4) {
 }
 
 .modalDialog > div {
-    width: 58.8%;
-    height: 67%;
+    width: 40%;
+    height: 50%;
     display: flex;
     box-shadow: 1px 1px 4px 2px rgb(197 119 119 / 20%);
     position: relative;
     margin: 6% auto;
     
-    /* border-radius: 10px; */
-    /* background: #e6e6e6; */
     background: -moz-linear-gradient(#fff, #999);
-    /* background: -webkit-linear-gradient(#fff, #999); */
     background: -o-linear-gradient(#fff, #999);
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
-}
+} */
 
 .close {
     background: #606061;
@@ -15449,4 +15477,292 @@ section:nth-of-type(4) {
     -moz-box-shadow: 1px 1px 3px #000;
     -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
+}
+
+
+/* SECCION DE AGENDA CON LOGOS PERSONALIZADOS */
+.izzilogoscontenedor{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.izzicontenedor1{
+    width: 100%;
+    height: 88%;
+    padding-left: 40px;
+    padding-top: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+}
+
+.izzicontenedor2{
+    width: 100%;
+    height: 87%;
+    text-align: end;
+    padding-right: 40px;
+    padding-top: 60px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* SECCION DE MODAL */
+
+.titulopatrocinadores > h4{
+    color: white;
+    font-weight: 600;
+}
+
+.contenidopatrocinadoresmodal{
+    margin-top: 20px;
+}
+.botonmasinfopatro{
+    width: 100%;
+	height: 40px;
+	/* background-color: #492c88; */
+	border-radius: 25px;
+	transition: all 0.4s;
+	border: none;
+	background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    z-index: 99999;
+
+}
+.botonmasinfo{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+}
+
+.botonmasinfopatro > .patrocinadorbut{
+	color: white;
+	font-weight: bold;
+}
+
+.item-empresas:hover .botonmasinfopatro{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
+
+/* REDIMENCION DE LOS LOGOS DE AGENDA */
+.imgemp1{
+    width: 150px;
+}
+.imgemp2{
+    width: 150px;
+}
+.imgemp3{
+    width: 150px;
+}
+.imgemp4{
+    width: 150px;
+}
+.imgemp5{
+    width: 110px;
+}
+.imgemp6{
+    width: 150px;
+}
+.imgemp7{
+    width: 150px;
+}
+.imgemp8{
+    width: 150px;
+}
+.imgemp9{
+    width: 150px;
+}
+.imagennula{
+    height: 120px;
+}
+
+@media (max-width: 1620px) {
+    .imgemp1{
+        width: 100px;
+    }
+    .imgemp2{
+        width: 100px;
+    }
+    .imgemp3{
+        width: 100px;
+    }
+    .imgemp4{
+        width: 100px;
+    }
+    .imgemp5{
+        width: 80px;
+    }
+    .imgemp6{
+        width: 100px;
+    }
+    .imgemp7{
+        width: 100px;
+    }
+    .imgemp8{
+        width: 100px;
+    }
+    .imgemp9{
+        width: 100px;
+    }
+    .imagennula{
+        height: 75px;
+    }
+    #main-container-agent{
+        margin: 0 auto;
+        width: 56%;
+        text-align: center;
+        margin-top: 110px;
+    }
+
+}
+
+/* NEWSECCION DE PATROCINADORES AJUESTE */
+
+.container-empresasnew{
+    /* width: 90%;
+    height: 100vh;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px; */
+    width: 90%;
+    height: 75vh;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-top: 90px; */
+    /* padding-bottom: 10px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  @media screen and (min-width: 590px) {
+    
+    .container-empresasnew{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  
+  
+  
+  @media screen and (min-width: 960px) {
+    
+    .container-empresasnew{
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 65px;
+    }
+    
+  }
+
+  .item-empresasnew:hover .playbutton{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
+.item-empresasnew{
+    cursor: pointer;
+    /* box-shadow: 0 0 5px 0 rgba(0,0,0,.095); */
+    transition: all 300ms;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .item-empresasnew::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+  }
+  
+  .item-empresasnew:hover:after{
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .item-empresasnew:hover {
+    transform: scale(1.05);
+  }
+
+  .item-empresasnew:hover .buttonpatrocinador{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
+/* .item-empresasnew:hover .playbutton{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+} */
+
+.buttonconf-patrocinadornew{
+    padding: 10px 30px 5px 30px;
+    width: 100%;
+    z-index: 99999;
+    border: none;
+}
+
+.buttonpatrocinadornew{
+    width: 100%;
+	height: 40px;
+	/* background-color: #492c88; */
+	border-radius: 25px;
+	transition: all 0.4s;
+	border: none;
+	background-color: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    z-index: 99999;
+}
+.buttonpatrocinadornew > .patrocinador-namenew{
+	color: white;
+	font-weight: bold;
+}
+
+/* .buttonconf-patrocinador{
+    padding: 0px 30px 20px 30px;
+    width: 100%;
+    z-index: 99999;
+    border: none;
+} */
+
+.item-empresasnew:hover .buttonpatrocinadornew{
+	background-color: #492c88; 
+	border-radius: 25px;
+	transition: all 0.4s;	
+}
+
+/* SECCION DEL MODAL PARA DESCARGAR ARCHIVOS */
+.descragarpdf{
+    color: #FFF;
+    
 }

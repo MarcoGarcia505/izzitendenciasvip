@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Izzi Tendencias 2021</title>
+    <title>izzi Tendencias 2021</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="{{ url('images/icons/iconoizzi.svg') }}"/>
@@ -19,6 +19,49 @@
 <body>
 <div class="limiter">
     <div class="container-login100">
+        <div class="izzipatron">
+            <div class="containerizzi">
+                <div class="logoprincipla">
+                    <img src="images/logosizzi/LOGOIZZIVPSTENDENCIAS.png" alt="logo izzi" class="item-img-empresas">
+                </div>
+                <div class="logomarcas">
+                    <div class="titulomarcas">
+                        <h3>PATROCINADORES:</h3>
+                    </div>
+                    <div class="newtamanoempresas">
+                        <div class="logosempresas">
+                            <div class="logoempresa1">
+                                <img src="images/logoslogin/CORNING.png" alt="CORNING" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa2">
+                                <img src="images/logoslogin/EYENET.png" alt="EYENET" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa3">
+                                <img src="images/logoslogin/FIBRAS.png" alt="FIBRAS" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa4">
+                                <img src="images/logoslogin/IKUSI.png" alt="IKUSI" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa5">
+                                <img src="images/logoslogin/KIO.png" alt="KIO" style="width: 80px;">
+                            </div>
+                            <div class="logoempresa6">
+                                <img src="images/logoslogin/MICROSOFT1.png" alt="MICROSOFT" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa7">
+                                <img src="images/logoslogin/MIRADA.png" alt="MIRADA" style="width: 100px;">
+                            </div>
+                            <div class="logoempresa8">
+                                <img src="images/logoslogin/RGO.png" alt="RGO" style="width: 80px;">
+                            </div>
+                            <div class="logoempresa9">
+                                <img src="images/logoslogin/TREKTEL1.png" alt="TREKTEL" style="width: 100px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
         <div class="wrap-login100">
             <form method="post" action="{{ route('_login') }}" class="login100-form">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}"/>

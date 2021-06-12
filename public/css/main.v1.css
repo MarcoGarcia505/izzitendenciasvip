@@ -174,7 +174,7 @@ iframe {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-image: url('../images/loginnuevoizzi.jpg');
+    background-image: url('../images/fondo1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -533,3 +533,95 @@ input[type="text" i]{
     color: #fff;
     line-height: 1.2;
 }
+
+/* seccion logos fonsdo */
+.izzipatron{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerizzi{
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.logoprincipla{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.logomarcas{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 20px;
+}
+.item-img-empresas{
+    max-width: 100%;
+    display: block;
+    width: 400px;
+    height: 320px;
+}
+
+.newtamanoempresas{
+    width: 400px;
+}
+@media (max-width: 1620px) {
+    .item-img-empresas{
+        max-width: 100%;
+        display: block;
+        width: 400px;
+        height: 285px;
+    }
+}
+
+
+.logosempresas{
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    text-align: center;
+}
+
+/* @media screen and (min-width: 590px) {
+    
+    .logosempresas{
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+  }
+  
+  
+  
+  @media screen and (min-width: 960px) {
+    
+    .logosempresas{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+  } */
+.titulomarcas{
+    width: 100%;
+    padding-left: 30px;
+}
+.titulomarcas > h3{
+    color: white;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+  }
